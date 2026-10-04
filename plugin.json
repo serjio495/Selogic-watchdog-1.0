@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "selogic-codex-watchdog",
+  "version": "0.1.0",
+  "description": "Independent completion guard for Codex: catches missing tests, likely secrets, incomplete review and scope risks before a coding task finishes.",
+  "author": {"name": "SELOGIC"},
+  "license": "MIT",
+  "keywords": ["codex", "review", "testing", "security", "watchdog"],
+  "extensions": {
+    "com.openai": {
+      "hooks": "./hooks/hooks.json",
+      "interface": {
+        "displayName": "SELOGIC Codex Watchdog",
+        "shortDescription": "Final-pass guard for Codex coding work",
+        "longDescription": "Adds a lightweight independent completion check to Codex. It tracks task complexity and test execution, scans diffs for likely secrets, and can request one additional pass before Codex finishes.",
+        "developerName": "SELOGIC",
+        "category": "Developer Tools",
+        "capabilities": ["Read"]
+      }
+    }
+  }
+}
