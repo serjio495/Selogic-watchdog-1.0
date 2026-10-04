@@ -1,0 +1,16 @@
+{
+  "name": "selogic-codex-watchdog",
+  "version": "0.1.0",
+  "description": "Independent completion guard for Codex coding work.",
+  "author": {"name": "SELOGIC"},
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "SELOGIC Codex Watchdog",
+    "shortDescription": "Final-pass guard for Codex coding work",
+    "longDescription": "Tracks complexity, tests and final review signals and asks Codex for one more pass when evidence is incomplete.",
+    "developerName": "SELOGIC",
+    "category": "Developer Tools",
+    "capabilities": ["Read"]
+  }
+}
