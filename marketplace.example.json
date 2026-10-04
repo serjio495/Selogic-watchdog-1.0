@@ -1,0 +1,12 @@
+{
+  "name": "selogic-local",
+  "interface": {"displayName": "SELOGIC Local Plugins"},
+  "plugins": [
+    {
+      "name": "selogic-codex-watchdog",
+      "source": {"source": "local", "path": "./.codex/plugins/selogic-codex-watchdog"},
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Developer Tools"
+    }
+  ]
+}
