@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/watchdog.py", "statusMessage": "Starting SELOGIC Watchdog"}]}
+    ],
+    "UserPromptSubmit": [
+      {"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/watchdog.py", "statusMessage": "Scoring task complexity"}]}
+    ],
+    "PostToolUse": [
+      {"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/watchdog.py", "statusMessage": "Updating Watchdog evidence"}]}
+    ],
+    "Stop": [
+      {"hooks": [{"type": "command", "command": "python3 ${PLUGIN_ROOT}/hooks/watchdog.py", "statusMessage": "Running final Watchdog pass", "timeout": 3}]}
+    ]
+  }
+}
